@@ -10,7 +10,7 @@ public class CVBankController {
 	
 	@GetMapping
 	public String hello() {
-		return "Hello";
+		return "<h1>Hello</h1>";
 	}
 
 }
