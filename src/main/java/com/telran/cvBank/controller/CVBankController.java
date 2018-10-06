@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 public class CVBankController {
-	
+
 	@GetMapping
 	public String hello() {
-		return "<h1>Hello</h1>";
+		return "Hello";
 	}
 
 }
