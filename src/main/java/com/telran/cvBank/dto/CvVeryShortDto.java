@@ -1,19 +1,13 @@
 package com.telran.cvBank.dto;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public class CvVeryShortDto {
 	private String cvId;
-
-	public CvVeryShortDto(String cvId) {
-		super();
-		this.cvId = cvId;
-	}
-
-	public CvVeryShortDto() {
-		super();
-	}
-
-	public String getCvId() {
-		return cvId;
-	}
 
 }

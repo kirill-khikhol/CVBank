@@ -1,5 +1,6 @@
 package com.telran.cvBank.service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -87,21 +88,20 @@ public class CompanyMockServise implements ICompanyService {
 		List<LocalExperienceDto> localExperience = new ArrayList<>();
 		localExperience.add(new LocalExperienceDto("developer", 5.5));
 		ExperienceDto experience = new ExperienceDto(localExperience, 5.5);
-		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", "01.01.1980", "0501234567", "petr@petrov.com",
-				"https://www.linkedin.com/in/petr-petrov-123456789/");
+		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", LocalDate.of(1980, 01, 01), "0501234567",
+				"petr@petrov.com", "https://www.linkedin.com/in/petr-petrov-123456789/");
 		List<String> preferableArea = new ArrayList<>();
 		preferableArea.add("IoT");
 		preferableArea.add("banking");
 		DescriptionDto description = new DescriptionDto("I am java developer", preferableArea, "team leader", 20000l,
 				50000l);
 		List<EducationDto> education = new ArrayList<>();
-		education.add(new EducationDto("technion", "m.s.", "2007", "Haifa, Israel", "details here"));
+		education
+				.add(new EducationDto("technion", "m.s.", LocalDate.of(2007, 01, 01), "Haifa, Israel", "details here"));
 		List<SkillDto> skills = new ArrayList<>();
 		skills.add(new SkillDto("java", true));
 		skills.add(new SkillDto("javaScript", false));
 		List<ProjectJobsDto> projectJobs = new ArrayList<>();
-		Date startDate = new Date(100l);
-		Date endDate = new Date(100000000l);
 		List<String> achivements = new ArrayList<>();
 		achivements.add("very fast");
 		List<String> certifications = new ArrayList<>();
@@ -116,8 +116,8 @@ public class CompanyMockServise implements ICompanyService {
 		List<String> footerInfo = new ArrayList<>();
 		footerInfo.add("footer info 1");
 		footerInfo.add("footer info 2");
-		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, startDate, endDate,
-				"good project for good people"));
+		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, LocalDate.of(2001, 01, 01),
+				LocalDate.of(2004, 01, 01), "good project for good people"));
 		cvList.add(new CvWrapperDto(new CvForCompanyDto("100500", "Java developer cv", title, experience, contactInfo,
 				description, education, skills, projectJobs, achivements, certifications, languages, footerLinks,
 				footerInfo, true)));
@@ -148,21 +148,20 @@ public class CompanyMockServise implements ICompanyService {
 		List<LocalExperienceDto> localExperience = new ArrayList<>();
 		localExperience.add(new LocalExperienceDto("developer", 5.5));
 		ExperienceDto experience = new ExperienceDto(localExperience, 5.5);
-		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", "01.01.1980", "0501234567", "petr@petrov.com",
-				"https://www.linkedin.com/in/petr-petrov-123456789/");
+		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", LocalDate.of(1980, 01, 01), "0501234567",
+				"petr@petrov.com", "https://www.linkedin.com/in/petr-petrov-123456789/");
 		List<String> preferableArea = new ArrayList<>();
 		preferableArea.add("IoT");
 		preferableArea.add("banking");
 		DescriptionDto description = new DescriptionDto("I am java developer", preferableArea, "team leader", 20000l,
 				50000l);
 		List<EducationDto> education = new ArrayList<>();
-		education.add(new EducationDto("technion", "m.s.", "2007", "Haifa, Israel", "details here"));
+		education
+				.add(new EducationDto("technion", "m.s.", LocalDate.of(2007, 01, 01), "Haifa, Israel", "details here"));
 		List<SkillDto> skills = new ArrayList<>();
 		skills.add(new SkillDto("java", true));
 		skills.add(new SkillDto("javaScript", false));
 		List<ProjectJobsDto> projectJobs = new ArrayList<>();
-		Date startDate = new Date(100l);
-		Date endDate = new Date(100000000l);
 		List<String> achivements = new ArrayList<>();
 		achivements.add("very fast");
 		List<String> certifications = new ArrayList<>();
@@ -177,8 +176,8 @@ public class CompanyMockServise implements ICompanyService {
 		List<String> footerInfo = new ArrayList<>();
 		footerInfo.add("footer info 1");
 		footerInfo.add("footer info 2");
-		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, startDate, endDate,
-				"good project for good people"));
+		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, LocalDate.of(2001, 01, 01),
+				LocalDate.of(2005, 01, 01), "good project for good people"));
 		cvList.add(new CvWrapperDto(new CvForCompanyDto("100500", "Java developer cv", title, experience, contactInfo,
 				description, education, skills, projectJobs, achivements, certifications, languages, footerLinks,
 				footerInfo, true)));
@@ -222,21 +221,20 @@ public class CompanyMockServise implements ICompanyService {
 		List<LocalExperienceDto> localExperience = new ArrayList<>();
 		localExperience.add(new LocalExperienceDto("developer", 5.5));
 		ExperienceDto experience = new ExperienceDto(localExperience, 5.5);
-		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", "01.01.1980", "0501234567", "petr@petrov.com",
-				"https://www.linkedin.com/in/petr-petrov-123456789/");
+		ContactInfoDto contactInfo = new ContactInfoDto("jarusalem", LocalDate.of(1980, 01, 01), "0501234567",
+				"petr@petrov.com", "https://www.linkedin.com/in/petr-petrov-123456789/");
 		List<String> preferableArea = new ArrayList<>();
 		preferableArea.add("IoT");
 		preferableArea.add("banking");
 		DescriptionDto description = new DescriptionDto("I am java developer", preferableArea, "team leader", 20000l,
 				50000l);
 		List<EducationDto> education = new ArrayList<>();
-		education.add(new EducationDto("technion", "m.s.", "2007", "Haifa, Israel", "details here"));
+		education
+				.add(new EducationDto("technion", "m.s.", LocalDate.of(2007, 01, 01), "Haifa, Israel", "details here"));
 		List<SkillDto> skills = new ArrayList<>();
 		skills.add(new SkillDto("java", true));
 		skills.add(new SkillDto("javaScript", false));
 		List<ProjectJobsDto> projectJobs = new ArrayList<>();
-		Date startDate = new Date(100l);
-		Date endDate = new Date(100000000l);
 		List<String> achivements = new ArrayList<>();
 		achivements.add("very fast");
 		List<String> certifications = new ArrayList<>();
@@ -251,13 +249,13 @@ public class CompanyMockServise implements ICompanyService {
 		List<String> footerInfo = new ArrayList<>();
 		footerInfo.add("footer info 1");
 		footerInfo.add("footer info 2");
-		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, startDate, endDate,
-				"good project for good people"));
+		projectJobs.add(new ProjectJobsDto("myCompany", "java developer", 90, LocalDate.of(2001, 01, 01),
+				LocalDate.of(2005, 01, 01), "good project for good people"));
 		cvList.add(new CvWrapperDto(new CvForCompanyDto("100500", "Java developer cv", title, experience, contactInfo,
 				description, education, skills, projectJobs, achivements, certifications, languages, footerLinks,
 				footerInfo, true)));
 
-		return new CvListFromFolderDto(currentPage, itemsOnPage, itemsTotal, cvList, folderName);
+		return new CvListFromFolderDto(folderName, currentPage, itemsOnPage, itemsTotal, cvList);
 	}
 
 	@Override
