@@ -5,9 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.telran.cvBank.dto.AddressDto;
 import com.telran.cvBank.dto.ApplicantDto;
 import com.telran.cvBank.dto.CompanyProfileDto;
