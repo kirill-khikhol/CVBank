@@ -1,24 +1,14 @@
 package com.telran.cvBank.dto;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public class LocalExperienceDto {
-private String position;
+	private String position;
 	private Double years;
 
-	public String getPosition() {
-		return position;
-	}
-
-	public Double getYears() {
-		return years;
-	}
-
-	public LocalExperienceDto() {
-		super();
-	}
-
-	public LocalExperienceDto(String position, Double years) {
-		super();
-		this.position = position;
-		this.years = years;
-	}
 }
