@@ -17,7 +17,13 @@ import lombok.Setter;
 public class UserEntity {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private long id;
 	private String login;
 	private String password;
+
+	public UserEntity(String login, String password) {
+		super();
+		this.login = login;
+		this.password = password;
+	}
 }

@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.telran.cvBank.dto.CompanyProfileDto;
 import com.telran.cvBank.dto.CompanyProfileWrapperDto;
-import com.telran.cvBank.dto.CompanyRegistrationDto;
+import com.telran.cvBank.dto.CompanyRegistrationRequestDto;
+import com.telran.cvBank.dto.CompanyRegistrationResponseDto;
 import com.telran.cvBank.dto.CvListDto;
 import com.telran.cvBank.dto.CvListFromFolderDto;
 import com.telran.cvBank.dto.CvVeryShortDto;
@@ -17,10 +18,11 @@ import com.telran.cvBank.dto.ProveSkillsResultDto;
 import com.telran.cvBank.dto.SearchProfileDto;
 import com.telran.cvBank.dto.SearchProfileWrapperDto;
 import com.telran.cvBank.dto.SearchProfilesDto;
+import lombok.Getter;
 
 @Service
 public interface ICompanyService {
-	CompanyRegistrationDto registration(CompanyProfileDto company);
+	CompanyRegistrationResponseDto registration(CompanyRegistrationRequestDto company);
 
 	CompanyProfileWrapperDto login();
 
