@@ -1,6 +1,8 @@
 package com.telran.cvBank.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import com.telran.cvBank.dto.AddressDto;
 
@@ -15,6 +17,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AddressEntity {
+	@Id
+	@GeneratedValue
+	private long id;
 	private String country;
 	private String cityTown;
 	private String street;

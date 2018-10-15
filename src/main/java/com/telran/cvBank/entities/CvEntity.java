@@ -3,6 +3,8 @@ package com.telran.cvBank.entities;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +17,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CvEntity {
-	private String cvId;
+	@Id
+	@GeneratedValue
+	private long cvId;
 	private TitleEntity title;
 	private ExperienceEntity experience;
 	private ContactInfoEntity contactInfo;
