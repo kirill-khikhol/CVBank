@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.telran.cvBank.dto.AddressDto;
 import com.telran.cvBank.dto.ApplicantDto;
 import com.telran.cvBank.dto.CompanyProfileDto;
 import com.telran.cvBank.dto.CompanyProfileWrapperDto;
-import com.telran.cvBank.dto.CompanyRegistrationDto;
+import com.telran.cvBank.dto.CompanyRegistrationRequestDto;
+import com.telran.cvBank.dto.CompanyRegistrationResponseDto;
 import com.telran.cvBank.dto.ContactInfoDto;
 import com.telran.cvBank.dto.CvForCompanyDto;
 import com.telran.cvBank.dto.CvListDto;
@@ -32,14 +34,22 @@ import com.telran.cvBank.dto.SearchProfileWrapperDto;
 import com.telran.cvBank.dto.SearchProfilesDto;
 import com.telran.cvBank.dto.SkillDto;
 import com.telran.cvBank.dto.TitleDto;
+import com.telran.cvBank.entities.CompanyEntity;
+import com.telran.cvBank.repository.ICompanyRepository;
 
 @Service
 public class CompanyMockServise implements ICompanyService {
+	@Autowired
+	ICompanyRepository companyRepository;
 
 	@Override
-	public CompanyRegistrationDto registration(CompanyProfileDto company) {
+	public CompanyRegistrationResponseDto registration(CompanyRegistrationRequestDto company) {
+		CompanyEntity companyEntity = new CompanyEntity(company);
+
+		companyRepository.save(companyEntity);
+
 		String token = company.getApplicant().getEmail() + ":" + "password";
-		return new CompanyRegistrationDto(token, company);
+		return new CompanyRegistrationResponseDto(token, company);
 	}
 
 	@Override

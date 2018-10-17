@@ -17,7 +17,8 @@ import com.telran.cvBank.dto.AddressDto;
 import com.telran.cvBank.dto.ApplicantDto;
 import com.telran.cvBank.dto.CompanyProfileDto;
 import com.telran.cvBank.dto.CompanyProfileWrapperDto;
-import com.telran.cvBank.dto.CompanyRegistrationDto;
+import com.telran.cvBank.dto.CompanyRegistrationRequestDto;
+import com.telran.cvBank.dto.CompanyRegistrationResponseDto;
 import com.telran.cvBank.dto.ContactInfoDto;
 import com.telran.cvBank.dto.CvForCompanyDto;
 import com.telran.cvBank.dto.CvListDto;
@@ -52,7 +53,7 @@ public class CompanyController implements CompanyRequestType {
 	}
 
 	@RequestMapping(value = REGISTRATION, method = RequestMethod.POST)
-	public CompanyRegistrationDto registration(@RequestBody CompanyProfileDto company) {
+	public CompanyRegistrationResponseDto registration(@RequestBody CompanyRegistrationRequestDto company) {
 		return companyService.registration(company);
 	}
 

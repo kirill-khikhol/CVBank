@@ -7,8 +7,8 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class CompanyRegistrationDto implements Serializable {
+public class CompanyRegistrationResponseDto implements Serializable {
 	private String token;
-	private CompanyProfileDto company;
+	private CompanyRegistrationRequestDto company;
 
 }
