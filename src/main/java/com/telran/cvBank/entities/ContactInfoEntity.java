@@ -1,5 +1,6 @@
 package com.telran.cvBank.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ContactInfoEntity {
+public class ContactInfoEntity implements Serializable{
 	@Id
 	@GeneratedValue
 	private long id;

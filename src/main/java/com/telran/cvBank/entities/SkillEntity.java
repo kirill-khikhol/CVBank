@@ -1,5 +1,7 @@
 package com.telran.cvBank.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class SkillEntity {
+public class SkillEntity implements Serializable{
 	@Id
 	@GeneratedValue
 	private long id;
