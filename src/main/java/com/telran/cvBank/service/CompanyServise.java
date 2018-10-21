@@ -38,15 +38,15 @@ import com.telran.cvBank.entities.CompanyEntity;
 import com.telran.cvBank.repository.ICompanyRepository;
 
 @Service
-public class CompanyMockServise implements ICompanyService {
-	@Autowired
-	ICompanyRepository companyRepository;
+public class CompanyServise implements ICompanyService {
+//	@Autowired
+//	ICompanyRepository companyRepository;
 
 	@Override
 	public CompanyRegistrationResponseDto registration(CompanyRegistrationRequestDto company) {
 		CompanyEntity companyEntity = new CompanyEntity(company);
 
-		companyRepository.save(companyEntity);
+//		companyRepository.save(companyEntity);
 
 		String token = company.getApplicant().getEmail() + ":" + "password";
 		return new CompanyRegistrationResponseDto(token, company);
