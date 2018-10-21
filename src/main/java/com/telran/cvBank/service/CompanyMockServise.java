@@ -2,7 +2,6 @@ package com.telran.cvBank.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,7 @@ public class CompanyMockServise implements ICompanyService {
 	public CompanyRegistrationResponseDto registration(CompanyRegistrationRequestDto company) {
 		CompanyEntity companyEntity = new CompanyEntity(company);
 
-		companyRepository.save(companyEntity);
+//		companyRepository.save(companyEntity);
 
 		String token = company.getApplicant().getEmail() + ":" + "password";
 		return new CompanyRegistrationResponseDto(token, company);
