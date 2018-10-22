@@ -1,5 +1,6 @@
 package com.telran.cvBank.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @NoArgsConstructor
-public class CompanyEntity extends UserEntity {
+public class CompanyEntity extends UserEntity implements Serializable {
 	@Id
 	@GeneratedValue
 	private long id;
