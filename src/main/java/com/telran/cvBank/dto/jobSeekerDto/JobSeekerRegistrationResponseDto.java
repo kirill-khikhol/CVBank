@@ -11,9 +11,4 @@ public class JobSeekerRegistrationResponseDto extends JobSeekerDto{
 		super(firstName, lastName, email, phone);
 		this.token = token;
 	}
-
-	
-	
-	
-
 }

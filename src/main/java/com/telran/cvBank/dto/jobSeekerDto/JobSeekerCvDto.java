@@ -1,6 +1,7 @@
 package com.telran.cvBank.dto.jobSeekerDto;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import com.telran.cvBank.dto.DescriptionDto;
@@ -8,8 +9,10 @@ import com.telran.cvBank.dto.ExperienceDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 public class JobSeekerCvDto implements Serializable{
 	private String cvId;
@@ -21,15 +24,15 @@ public class JobSeekerCvDto implements Serializable{
 	private ContactInfoJobSeekerDto contactInfo;
 	private boolean isContactInfoVisible;
 	private DescriptionDto description;
-	private EducationJobSeekerDto education;
-	private Set<SkillJobSeekerDto> skills;
-	private ProjectJobSeekerDto projects;
-	private Set<String> achiviements;
-	private Set<String> certifications;
-	private Set<String> languages;
-	private Set<String> footerLinks;
+	private List<EducationJobSeekerDto> education;
+	private List<SkillJobSeekerDto> skills;
+	private List<ProjectJobSeekerDto> projects;
+	private List<String> achiviements;
+	private List<String> certifications;
+	private List<String> languages;
+	private List<String> footerLinks;
 	private boolean isFooterLinkVisible;
-	private Set<String> footerInfo;
+	private List<String> footerInfo;
 	private boolean isFooterInfoVisible;
 	private boolean isActive;
 	private String cvStyle;
