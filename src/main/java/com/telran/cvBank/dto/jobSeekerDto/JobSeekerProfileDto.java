@@ -1,21 +1,15 @@
 package com.telran.cvBank.dto.jobSeekerDto;
+import java.util.List;
 
-import java.io.Serializable;
-import java.util.Set;
-
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class JobSeekerProfileDto extends JobSeekerDto{
 	
-	Set<JobSeekerCvDto> cvList;
-
-	public JobSeekerProfileDto(String firstName, String lastName, String email, String phone,
-			Set<JobSeekerCvDto> cvList) {
-		super(firstName, lastName, email, phone);
-		this.cvList = cvList;
-	}
-	
-	
-	
-
+	List<JobSeekerCvDto> cvList;
 }

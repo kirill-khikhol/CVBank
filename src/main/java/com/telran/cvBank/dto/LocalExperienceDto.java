@@ -1,14 +1,15 @@
 package com.telran.cvBank.dto;
-
-import java.util.List;
+import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @Getter
-public class LocalExperienceDto {
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class LocalExperienceDto implements Serializable{
 	private String position;
 	private Double years;
-
 }

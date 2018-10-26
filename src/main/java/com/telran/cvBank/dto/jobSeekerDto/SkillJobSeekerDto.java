@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SkillJobSeekerDto implements Serializable{
+	
 	private String skillName;
-
 }

@@ -1,5 +1,4 @@
 package com.telran.cvBank.dto.jobSeekerDto;
-
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;

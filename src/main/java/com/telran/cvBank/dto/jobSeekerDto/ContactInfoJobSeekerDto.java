@@ -1,32 +1,18 @@
 package com.telran.cvBank.dto.jobSeekerDto;
-
-import java.time.LocalDate;
-
 import com.telran.cvBank.dto.ContactInfoDto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ContactInfoJobSeekerDto extends ContactInfoDto {
 	
-	boolean isResidenceVisible;
-	boolean isBirthdayVisible;
-	boolean isPhoneVisible;
-	boolean isEmailVisible;
-	boolean isLinkedInVisible;
-	public ContactInfoJobSeekerDto(String residence, LocalDate birthday, String phone, String email, String linkedIn,
-			boolean isResidenceVisible, boolean isBirthdayVisible, boolean isPhoneVisible, boolean isEmailVisible,
-			boolean isLinkedInVisible) {
-		super(residence, birthday, phone, email, linkedIn);
-		this.isResidenceVisible = isResidenceVisible;
-		this.isBirthdayVisible = isBirthdayVisible;
-		this.isPhoneVisible = isPhoneVisible;
-		this.isEmailVisible = isEmailVisible;
-		this.isLinkedInVisible = isLinkedInVisible;
-	}
-	
-	
-	
-	
-	
-
+	boolean isResidenceVisible = true;
+	boolean isBirthdayVisible = true;
+	boolean isPhoneVisible = true;
+	boolean isEmailVisible = true;
+	boolean isLinkedInVisible = true;
 }

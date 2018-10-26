@@ -4,8 +4,8 @@ import com.telran.cvBank.dto.TitleDto;
 
 public class TitleJobSeekerDto extends TitleDto {
 
-	boolean isFirstNameVisible;
-	boolean isLastNameVisible;
+	boolean isFirstNameVisible = true;
+	boolean isLastNameVisible = true;
 	
 	public TitleJobSeekerDto(String firstName, String lastName, boolean isFirstNameVisible, boolean isLastNameVisible) {
 		super(firstName, lastName);
