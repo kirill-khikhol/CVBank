@@ -24,7 +24,7 @@ public class JobSeekerOriginCvDto implements Serializable{
 	private boolean isContactInfoVisible = true;
 	private DescriptionDto description;
 	private List<EducationJobSeekerDto> education;
-	private List<SkillJobSeekerDto> skills;
+	private List<SkillNamesJobSeekerDto> skills;
 	private List<ProjectJobSeekerDto> projectJobs;
 	private List<String> achiviements;
 	private List<String> certifications;
