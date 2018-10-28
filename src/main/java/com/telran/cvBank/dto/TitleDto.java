@@ -1,14 +1,15 @@
 package com.telran.cvBank.dto;
-
-import java.util.List;
+import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @Getter
-public class TitleDto {
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class TitleDto implements Serializable{
 	private String firstName;
 	private String lastName;
-
 }

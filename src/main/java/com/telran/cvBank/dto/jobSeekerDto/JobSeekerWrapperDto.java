@@ -1,15 +1,14 @@
-package com.telran.cvBank.dto;
-
+package com.telran.cvBank.dto.jobSeekerDto;
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CvVeryShortDto implements Serializable{
-	private String cvId;
-
+@Getter
+public class JobSeekerWrapperDto implements Serializable {
+	
+	private JobSeekerDto jobSeeker;
 }

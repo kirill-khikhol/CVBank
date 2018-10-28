@@ -1,11 +1,15 @@
 package com.telran.cvBank.dto.jobSeekerDto;
+import com.telran.cvBank.dto.CvVeryShortDto;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-public class JobSeekerCvDto extends JobSeekerOriginCvDto{
+public class CvRegistry extends CvVeryShortDto{
+	
+	private String cvName;
 	private Integer viewCount;
 }
