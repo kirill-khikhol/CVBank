@@ -3,6 +3,7 @@ package com.telran.cvBank.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,15 +22,14 @@ import lombok.Setter;
 @Setter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 public class CompanyEntity extends UserEntity implements Serializable {
-	@Id
-	@GeneratedValue
-	private long id;
+
 	private String companyName;
 	private String website;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private AddressEntity address;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private ApplicantEntity applicant;
 	@OneToMany
 	private List<FolderEntity> myFolders;
@@ -44,6 +44,17 @@ public class CompanyEntity extends UserEntity implements Serializable {
 		this.applicant = new ApplicantEntity(company.getApplicant());
 //		this.myFolders = myFolders;
 //		this.myCvList = myCvList;
+	}
+
+	public CompanyEntity(String login, String password, String companyName, String website, AddressEntity address,
+			ApplicantEntity applicant, List<FolderEntity> myFolders, List<CvEntity> myCvList) {
+		super(login, password);
+		this.companyName = companyName;
+		this.website = website;
+		this.address = address;
+		this.applicant = applicant;
+		this.myFolders = myFolders;
+		this.myCvList = myCvList;
 	}
 //	public CompanyEntity(Long id, String login, String password, String companyName, String website,
 //			AddressEntity address, ApplicantEntity applicant, List<FolderEntity> myFolders, List<CvEntity> myCvList) {

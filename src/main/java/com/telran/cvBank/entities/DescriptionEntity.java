@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,11 +19,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class DescriptionEntity implements Serializable{
+public class DescriptionEntity implements Serializable {
 	@Id
 	@GeneratedValue
 	private long id;
 	private String about;
+	@ElementCollection
 	private List<String> preferableArea;
 	private String position;
 	private long salaryFrom;

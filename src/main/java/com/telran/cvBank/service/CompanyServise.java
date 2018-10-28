@@ -34,18 +34,18 @@ import com.telran.cvBank.dto.SearchProfilesDto;
 import com.telran.cvBank.dto.SkillDto;
 import com.telran.cvBank.dto.TitleDto;
 import com.telran.cvBank.entities.CompanyEntity;
-import com.telran.cvBank.repository.ICompanyRepository;
+import com.telran.cvBank.repository.CompanyRepository;
 
 @Service
 public class CompanyServise implements ICompanyService {
-//	@Autowired
-//	ICompanyRepository companyRepository;
+	@Autowired
+	CompanyRepository companyRepository;
 
 	@Override
 	public CompanyRegistrationResponseDto registration(CompanyRegistrationRequestDto company) {
 		CompanyEntity companyEntity = new CompanyEntity(company);
 
-//		companyRepository.save(companyEntity);
+		companyRepository.save(companyEntity);
 
 		String token = company.getApplicant().getEmail() + ":" + "password";
 		return new CompanyRegistrationResponseDto(token, company);

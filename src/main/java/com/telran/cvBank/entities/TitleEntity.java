@@ -17,7 +17,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TitleEntity implements Serializable{
+public class TitleEntity implements Serializable {
 	@Id
 	@GeneratedValue
 	private long id;

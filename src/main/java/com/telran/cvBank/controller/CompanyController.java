@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,7 +56,8 @@ public class CompanyController implements CompanyRequestType {
 	}
 
 	@RequestMapping(value = REGISTRATION, method = RequestMethod.POST)
-	public CompanyRegistrationResponseDto registration(@RequestBody CompanyRegistrationRequestDto company) {
+	public CompanyRegistrationResponseDto registration(@RequestBody CompanyRegistrationRequestDto company,
+			@RequestHeader(name = "Authorization") String header) {
 		return companyService.registration(company);
 	}
 
